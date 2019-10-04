@@ -1,7 +1,7 @@
 package com.bhupen.dailynews.features.post
 
 /**
- * Created by Bhupen on 17/03/2018.
+ * Created by Bhupen
  */
 
 import com.bhupen.dailynews.R
@@ -35,12 +35,12 @@ class PostPresenter(postView: PostView) : BasePresenter<PostView>(postView) {
     fun loadPosts() {
         view.showLoading()
         subscription = postApi
-                .getPosts()
+                .getCommits()
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .doOnTerminate { view.hideLoading() }
                 .subscribe(
-                        { postList -> view.updatePosts(postList) },
+                        { postList -> view.updateCommits(postList) },
                         { view.showError(R.string.unknown_error) }
                 )
     }

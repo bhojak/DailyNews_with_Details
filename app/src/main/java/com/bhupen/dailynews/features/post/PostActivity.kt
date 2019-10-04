@@ -1,7 +1,7 @@
 package com.bhupen.dailynews.features.post
 
 /**
- * Created by Bhupen on 17/03/2018.
+ * Created by Bhupen
  */
 import android.content.Context
 import android.content.Intent
@@ -14,7 +14,7 @@ import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
 import android.widget.Toast
-import com.bhupen.dailynews.dataType.model.Post
+import com.bhupen.dailynews.dataType.model.Git_commit
 import com.bhupen.dailynews.databinding.ActivityPostBinding
 import com.bhupen.dailynews.features.details.DetailsActivity
 import com.bhupen.dailynews.shared.base.BaseActivity
@@ -32,7 +32,7 @@ class PostActivity : BaseActivity<PostPresenter>(), PostView {
      * The adapter for the list of posts
      */
     private val postsAdapter = PostAdapter(this)
-    private var postList: List<Post> = listOf()
+    private var postList: List<Git_commit> = listOf()
 
     interface ClickListener {
         fun onClick(view: View, position: Int)
@@ -52,11 +52,7 @@ class PostActivity : BaseActivity<PostPresenter>(), PostView {
         binding.posts.addOnItemTouchListener(RecyclerTouchListener(this,
                 binding.posts, object : ClickListener {
             override fun onClick(view: View, position: Int) {
-                //Values are passing to activity & to fragment as well
-//                Toast.makeText(this@PostActivity, "Single Click on position : $position",
-//                        Toast.LENGTH_SHORT).show()
-
-                // Launch second activity, pass part ID as string parameter
+                // Launch second activity
                 openNewViewScreen(position)
 
             }
@@ -72,17 +68,20 @@ class PostActivity : BaseActivity<PostPresenter>(), PostView {
 
     private fun openNewViewScreen(position: Int) {
         val showDetailActivityIntent = Intent(this, DetailsActivity::class.java)
-        showDetailActivityIntent.putExtra("title", postList[position].title)
-        showDetailActivityIntent.putExtra("body",  postList[position].body)
+        showDetailActivityIntent.putExtra("title", postList[position].node_id)
+        showDetailActivityIntent.putExtra("body",  postList[position].comments_url)
         startActivity(showDetailActivityIntent)
     }
+
+
+
 
     override fun onDestroy() {
         super.onDestroy()
         presenter.onViewDestroyed()
     }
 
-    override fun updatePosts(posts: List<Post>) {
+    override fun updateCommits(posts: List<Git_commit>) {
         postsAdapter.updatePosts(posts)
         postList = posts
     }

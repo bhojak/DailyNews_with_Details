@@ -60,6 +60,9 @@ dependencies {
     // Data binding
     kapt "com.android.databinding:compiler:3.0.1"
 
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+
 
 
 }

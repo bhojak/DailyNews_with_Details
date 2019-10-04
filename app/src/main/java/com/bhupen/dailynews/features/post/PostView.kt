@@ -1,10 +1,10 @@
 package com.bhupen.dailynews.features.post
 
 /**
- * Created by Bhupen on 17/03/2018.
+ * Created by Bhupen
  */
 import android.support.annotation.StringRes
-import com.bhupen.dailynews.dataType.model.Post
+import com.bhupen.dailynews.dataType.model.Git_commit
 import com.bhupen.dailynews.shared.base.BaseView
 
 
@@ -16,7 +16,10 @@ interface PostView : BaseView {
      * Updates the previous posts by the specified ones
      * @param posts the list of posts that will replace existing ones
      */
-    fun updatePosts(posts: List<Post>)
+  //  fun updatePosts(posts: List<Post>)
+
+    fun updateCommits(posts: List<Git_commit>)
+
 
     /**
      * Displays an error in the view

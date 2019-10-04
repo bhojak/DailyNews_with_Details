@@ -1,7 +1,7 @@
 package com.bhupen.dailynews.shared.utils
 
 /**
- * Created by Bhupen on 17/03/2018.
+ * Created by Bhupen
  */
 
 import android.databinding.BindingAdapter

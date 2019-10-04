@@ -7,7 +7,7 @@ import com.bhupen.dailynews.shared.di.module.ContextModule
 import com.bhupen.dailynews.shared.di.module.NetworkModule
 
 /**
- * Created by Bhupen on 17/03/2018.
+ * Created by Bhupen
  */
 /**
  * Base presenter any presenter of the application must extend. It provides initial injections and

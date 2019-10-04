@@ -3,7 +3,7 @@ package com.bhupen.dailynews.features.details
 import com.bhupen.dailynews.shared.base.BaseView
 
 /**
- * Created by Bhupen on 26/08/2019.
+ * Created by Bhupen
  */
 interface DetailsView  : BaseView {
 }

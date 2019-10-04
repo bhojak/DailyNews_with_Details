@@ -1,7 +1,7 @@
 package com.bhupen.dailynews.shared.base
 
 /**
- * Created by Bhupen on 17/03/2018.
+ * Created by Bhupen
  */
 
 import android.content.Context

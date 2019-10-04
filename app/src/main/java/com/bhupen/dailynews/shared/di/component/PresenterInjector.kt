@@ -1,7 +1,7 @@
 package com.bhupen.dailynews.shared.di.component
 
 /**
- * Created by Bhupen on 17/03/2018.
+ * Created by Bhupen
  */
 import com.bhupen.dailynews.features.post.PostPresenter
 import com.bhupen.dailynews.shared.base.BaseView

@@ -1,7 +1,9 @@
 package com.bhupen.dailynews.shared.utils
 
 /**
- * Created by Bhupen on 17/03/2018.
+ * Created by Bhupen
  */
 /** The base URL of the API */
-const val BASE_URL: String = "https://jsonplaceholder.typicode.com"
+
+
+const val BASE_URL: String = "https://api.github.com/repos/JetBrains/kotlin/"

@@ -1,7 +1,7 @@
 package com.bhupen.dailynews.shared.di.module
 
 /**
- * Created by Bhupen on 17/03/2018.
+ * Created by Bhupen
  */
 import com.bhupen.dailynews.shared.api.PostApi
 import com.bhupen.dailynews.shared.utils.BASE_URL

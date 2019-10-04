@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">DailyNews</string>
+    <string name="app_name">GitCommits</string>
     <string name="unknown_error">An unknown error occurred.</string>
 </resources>
